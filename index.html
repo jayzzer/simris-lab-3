@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/materialize.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h5>Задачи</h5>
+
+            <div class="col s6 center-align">
+                <div class="input-field">
+                    <input id="task-exec" type="email">
+                    <label for="task-exec">Исполнитель (email)</label>
+                </div>
+                
+                <button class="waves-effect waves-light btn" onclick="showTasks()">Показать</button>
+            </div>
+
+            <div class="col s6 center-align">
+                <div class="input-field">
+                    <input id="task-title" type="text">
+                    <label for="task-title">Заголовок задачи</label>
+                </div>
+                <div class="input-field">
+                    <input id="task-priority" type="number" min="0">
+                    <label for="task-priority">Приоритет</label>
+                </div>
+
+                <button class="waves-effect waves-light btn" onclick="createTask()">Добавить</button>
+            </div>
+        </div>
+        <hr style="margin: 50px 0 50px 0;"/>
+        <div class="row">
+            <h5 style="display: inline;">
+                Лог
+            </h5>
+            <button class="waves-effect waves-light red btn" style="float: right;" onclick="clearLog()">Очистить</button>
+            
+            <div class="col s12">
+                <ul id="log" class="collection" style="max-height: 300px; overflow: auto;">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/devpromrestapi.js"></script>
+    <script src="js/materialize.min.js"></script>
+</body>
+</html>
